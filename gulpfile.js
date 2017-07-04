@@ -67,3 +67,5 @@ gulp.task('watch', function () {
     gulp.watch(paths.script, ['js:dev']);
     gulp.watch([paths.html, paths.js]).on('change', browser.reload);
 });
+gulp.task('default', ['clean', 'js:dev', 'sass:dev', 'watch']);
+gulp.task('prod', ['clean', 'js:prod', 'sass:prod']);
