@@ -56,3 +56,14 @@ gulp.task('js:prod', function () {
         .pipe(min())
         .pipe(gulp.dest(paths.dist));
 });
+gulp.task('watch', function () {
+    browser.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp.watch(paths.scss, ['sass:dev']);
+    gulp.watch(paths.script, ['js:dev']);
+    gulp.watch([paths.html, paths.js]).on('change', browser.reload);
+});
