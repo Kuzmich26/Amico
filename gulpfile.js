@@ -41,3 +41,12 @@ gulp.task('sass:prod', function() {
     }).on('error', sass.logError))
     .pipe(gulp.dest(paths.dist));
 });
+gulp.task('js:dev', function () {
+    return gulp.src(paths.script)
+        .pipe(sourcemaps.init())
+        .pipe(size({showFiles: true}))
+        .pipe(concat('build.js'))
+        .pipe(sourcemaps.write())
+        .pipe(size({showFiles: true}))
+        .pipe(gulp.dest(paths.jsdir));
+});
