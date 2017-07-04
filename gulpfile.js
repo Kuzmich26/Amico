@@ -17,3 +17,9 @@ var gulp = require('gulp'),
     cssdir : './dev/css',
     html: './dev/**/*.html'
 };
+gulp.task('clean', function () {
+    del.sync([
+        paths.jsdir,
+        paths.cssdir
+    ]);
+});
