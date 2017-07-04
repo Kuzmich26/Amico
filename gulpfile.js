@@ -50,3 +50,9 @@ gulp.task('js:dev', function () {
         .pipe(size({showFiles: true}))
         .pipe(gulp.dest(paths.jsdir));
 });
+gulp.task('js:prod', function () {
+    return gulp.src(paths.script)
+        .pipe(concat('build.js'))
+        .pipe(min())
+        .pipe(gulp.dest(paths.dist));
+});
