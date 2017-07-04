@@ -15,19 +15,29 @@ var paths = {
     '!dev/sass/**/*_scsslint_tmp*.scss'
   ],
   cssdir: './dev/css',
-  html: './dev/**/*.html'
+  html: './dev/**/*.html',
+  dist: './dist'
 };
 gulp.task('clean', function() {
   del.sync([paths.jsdir, paths.cssdir]);
 });
-gulp.task('sass:dev', function () {
-    return gulp.src(paths.scss)
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            sourceComments: 'normal'
-        }).on('error', sass.logError))
-        .pipe(size({ showFiles: true }))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.cssdir))
-        .pipe(browser.stream());
+gulp.task('sass:dev', function() {
+  return gulp.src(paths.scss)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      sourceComments: 'normal'
+    }).on('error', sass.logError))
+    .pipe(size({
+      showFiles: true
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.cssdir))
+    .pipe(browser.stream());
+});
+gulp.task('sass:prod', function() {
+  return gulp.src(paths.scss)
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(gulp.dest(paths.dist));
 });
