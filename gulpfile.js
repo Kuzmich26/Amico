@@ -14,7 +14,7 @@ var paths = {
     './dev/sass/**/*.scss',
     '!dev/sass/**/*_scsslint_tmp*.scss'
   ],
-  cssdir: ['./dev/css/**','!./dev/css', '!dev/css/bootstrap.css', '!dev/css/bootstrap.css.map', '!dev/css/bootstrap-theme.css', '!dev/css/bootstrap-theme.css.map']
+  cssdir: './dev/css',
   html: './dev/**/*.html',
   dist: './dist'
 };
@@ -59,7 +59,7 @@ gulp.task('js:prod', function () {
 gulp.task('watch', function () {
     browser.init({
         server: {
-            baseDir: "./"
+            baseDir: './dev/'
         }
     });
 
