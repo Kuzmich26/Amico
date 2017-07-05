@@ -14,7 +14,7 @@ var paths = {
     './dev/sass/**/*.scss',
     '!dev/sass/**/*_scsslint_tmp*.scss'
   ],
-  cssdir: './dev/css',
+  cssdir: ['./dev/css/**','!./dev/css', '!dev/css/bootstrap.css', '!dev/css/bootstrap.css.map', '!dev/css/bootstrap-theme.css', '!dev/css/bootstrap-theme.css.map']
   html: './dev/**/*.html',
   dist: './dist'
 };
