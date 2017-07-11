@@ -1,21 +1,11 @@
 header{
-  //max-height: 175px;
   .container{
     .row{
-      display: flex;
-      flex: {
-        direction: row;
-        wrap: wrap;
-      }
-      align-items: center;
+      @include flexBox;
     }
   }
+@include corpBackground;
 }
-
-/*.container-table {
-    display: table;
+.img_head{
+margin: 0 auto;
 }
-.vertical-center-row {
-    display: table-cell;
-    vertical-align: middle;
-}*/
