@@ -1,0 +1,21 @@
+header{
+  //max-height: 175px;
+  .container{
+    .row{
+      display: flex;
+      flex: {
+        direction: row;
+        wrap: wrap;
+      }
+      align-items: center;
+    }
+  }
+}
+
+/*.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}*/
