@@ -15,4 +15,7 @@
 @import "_bootstrap-theme";
 @import "_header";
 @import "_navbar";
-@import "_mixins"
+@import "_mixins";
+.titlebox {
+  @include flexBox;
+}
