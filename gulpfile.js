@@ -8,7 +8,8 @@ var gulp = require('gulp'),
   browser = require("browser-sync").create();
 var paths = {
   js: './dev/JS/**/*.js',
-  img: './dev/img/',
+  img: './dev/img/**',
+  imgdist: './dist/img',
   jsdir: './dev/JS',
   script: './dev//scripts/**/*.js',
   scss: [
@@ -76,7 +77,7 @@ gulp.task('html:prod', function () {
 });
 gulp.task('img:prod', function () {
     return gulp.src(paths.img)
-      .pipe(gulp.dest(paths.dist));
+      .pipe(gulp.dest(paths.imgdist));
 });
 gulp.task('default', ['clean', 'js:dev', 'sass:dev', 'watch']);
 gulp.task('prod', ['clean:prod','html:prod','img:prod', 'js:prod', 'sass:prod']);
