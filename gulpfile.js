@@ -10,6 +10,8 @@ var paths = {
   js: './dev/JS/**/*.js',
   img: './dev/img/**',
   imgdist: './dist/img',
+  fonts: './dev/fonts/**',
+  fontsdist: './dist/fonts',
   jsdir: './dev/JS',
   script: './dev//scripts/**/*.js',
   scss: [
@@ -79,5 +81,9 @@ gulp.task('img:prod', function () {
     return gulp.src(paths.img)
       .pipe(gulp.dest(paths.imgdist));
 });
+gulp.task('fonts:prod', function () {
+    return gulp.src(paths.fonts)
+      .pipe(gulp.dest(paths.fontsdist));
+});
 gulp.task('default', ['clean', 'js:dev', 'sass:dev', 'watch']);
-gulp.task('prod', ['clean:prod','html:prod','img:prod', 'js:prod', 'sass:prod']);
+gulp.task('prod', ['clean:prod','html:prod','img:prod','fonts:prod','js:prod', 'sass:prod']);
