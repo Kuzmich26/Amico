@@ -8,6 +8,7 @@ var gulp = require('gulp'),
   browser = require("browser-sync").create();
 var paths = {
   js: './dev/JS/**/*.js',
+  img: './dev/img/',
   jsdir: './dev/JS',
   script: './dev//scripts/**/*.js',
   scss: [
@@ -67,5 +68,15 @@ gulp.task('watch', function () {
     gulp.watch(paths.script, ['js:dev']);
     gulp.watch([paths.html, paths.js]).on('change', browser.reload);
 });
+gulp.task('clean:prod', function() {
+  del.sync(paths.dist)});
+gulp.task('html:prod', function () {
+    return gulp.src(paths.html)
+      .pipe(gulp.dest(paths.dist));
+});
+gulp.task('img:prod', function () {
+    return gulp.src(paths.img)
+      .pipe(gulp.dest(paths.dist));
+});
 gulp.task('default', ['clean', 'js:dev', 'sass:dev', 'watch']);
-gulp.task('prod', ['clean', 'js:prod', 'sass:prod']);
+gulp.task('prod', ['clean:prod','html:prod','img:prod', 'js:prod', 'sass:prod']);

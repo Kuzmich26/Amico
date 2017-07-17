@@ -16,6 +16,11 @@
 @import "_header";
 @import "_navbar";
 @import "_mixins";
+
 .titlebox {
   @include flexBox;
 }
+
+#clients {
+  @include carousel3;
+  }
