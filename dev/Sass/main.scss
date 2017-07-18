@@ -11,9 +11,9 @@ body{
 .titlebox {
   @include flexBox;
 };
-#clients {
+#clients, #feedback {
   @include carousel3};
-#firstImpression, #clients {
+#firstImpression, #clients, #feedback {
   .carousel {@include corpBackground;}
   .carousel img{padding:0 20px;}
   .carousel h1 {color: #fff;}
