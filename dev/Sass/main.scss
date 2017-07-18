@@ -1,38 +1,27 @@
-@mixin corpBackground {
-  background-image: linear-gradient(to bottom, #005693, #288cd2);
-  background-repeat: no-repeat;
-  height: 100%;
-};
-@mixin flexBox {
-  display: flex;
-  flex: {
-    direction: row;
-    wrap: wrap;
-  }
-  align-items: center;
-};
+@import "_mixins";
 @import "_bootstrap";
 @import "_bootstrap-theme";
 @import "_header";
 @import "_navbar";
-@import "_mixins";
+@import "_inFigures";
 
+body{
+  @include corpBackground;
+}
 .titlebox {
   @include flexBox;
 };
 #clients {
-  @include carousel3;
-  }
-  .carousel {
-    @include corpBackground;
-  }
+  @include carousel3};
+#firstImpression, #clients {
+  .carousel {@include corpBackground;}
   .carousel img{padding:0 20px;}
   .carousel h1 {color: #fff;}
   .carousel h2 small{color: #289bde}
-  .carousel p {text-align: center; color: #fff}
-//.featurette{
-//  @include corpBackground;
-//}
-//p,li,h2 {
-//color: #fff
-//}
+  .carousel p {text-align: center; color: #fff};};
+.featurette{
+  @include corpBackground;
+};
+p,li,h2,h1 {
+color: #fff
+}

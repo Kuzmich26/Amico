@@ -10,10 +10,11 @@
 
   <!-- Bootstrap -->
   <link href="CSS/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="JS/build.js"></script>
+
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -384,6 +385,64 @@
   		<span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
   </section>
+  <section id="inNumbers">
+    <div class="container">
+      <div class="row titleBox">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 class="fittext text-center">МЫ В ЦИФРАХ</h1></div>
+      </div>
+    </div>
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-8 col-md-offset-2">
+                  <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+  				<div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+  				  <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+  				    <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+  				    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+  				    <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+
+  				  </ol>
+  				  <!-- Carousel items -->
+  				  <div class="carousel-inner">
+  				    <div class="item">
+                          <div class="profile-circle" style="background-color: rgba(0,0,0,.2);"><h1>25</h1></div>
+  				    	<blockquote>
+  				    		<p>25 лет на рынке измерительных систем.</p>
+  				    	</blockquote>
+  				    </div>
+  				    <div class="item">
+                          <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"><h1>1725</h1></div>
+  				    	<blockquote>
+  				    		<p>1725 оборудованых объектов.</p>
+  				    	</blockquote>
+  				    </div>
+  				    <div class="active item">
+                          <div class="profile-circle" style="background-color: rgba(145,169,216,.2);"><h1>24</h1></div>
+  				    	<blockquote>
+  				    		<p>Присутвствие на рынке 24 стран мира.</p>
+  				    	</blockquote>
+  				    </div>
+                      <div class="item">
+                          <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"><h1>1</h1></div>
+      			    	<blockquote>
+  				    		<p>1 год - средний срок окупаемости системы.</p>
+  				    	</blockquote>
+  				    </div>
+                      <div class="item">
+                          <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"><h1>Тысячи</h1></div>
+      			    	<blockquote>
+  				    		<p>Тысячи довольных клиентов по всему Миру</p>
+  				    	</blockquote>
+  				    </div>
+  				  </div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
 <section id="clients">
   <div class="container">
     <div class="row titleBox">
@@ -436,13 +495,9 @@
   		</div>
   	</div>
   </div><!--.container-->
-  </section>
-  <script type="text/javascript">
-    $(".fittext").fitText(1, {
-      minFontSize: '9px',
-      maxFontSize: '25px'
-    });
-  </script>
+    </section>
+<script src="JS/build.js"></script>
+</script>
 </body>
 
 </html>

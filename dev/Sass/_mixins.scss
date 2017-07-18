@@ -39,5 +39,18 @@
   a{
     border: none;
   }
-  
-}
+
+};
+@mixin corpBackground {
+  background-image: linear-gradient(to bottom, #005693, #288cd2);
+  background-repeat: no-repeat;
+  height: 100%;
+};
+@mixin flexBox {
+  display: flex;
+  flex: {
+    direction: row;
+    wrap: wrap;
+  }
+  align-items: center;
+};
