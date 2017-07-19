@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  rigger = require('gulp-rigger'),
   del = require('del'),
   concat = require('gulp-concat'),
   min = require('gulp-uglify'),
@@ -13,7 +14,7 @@ var paths = {
   fonts: './dev/fonts/**',
   fontsdist: './dist/fonts',
   jsdir: './dev/JS',
-  script: './dev//scripts/**/*.js',
+  script: './dev/scripts/**/*.js',
   scss: [
     './dev/sass/**/*.scss',
     '!dev/sass/**/*_scsslint_tmp*.scss'
@@ -47,6 +48,7 @@ gulp.task('sass:prod', function() {
 });
 gulp.task('js:dev', function () {
     return gulp.src(paths.script)
+        .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(size({showFiles: true}))
         .pipe(concat('build.js'))
