@@ -14,13 +14,15 @@ var paths = {
   fonts: './dev/fonts/**',
   fontsdist: './dist/fonts',
   jsdir: './dev/JS',
-  script: './dev/scripts/**/*.js',
+  script: ['./dev/scripts/core.js','./dev/scripts/custom.js'],
   scss: [
     './dev/sass/**/*.scss',
     '!dev/sass/**/*_scsslint_tmp*.scss'
   ],
   cssdir: './dev/css',
   html: './dev/**/*.html',
+  cssdist: './dist/css',
+  jsdist: './dist/JS',
   dist: './dist'
 };
 gulp.task('clean', function() {
@@ -44,23 +46,23 @@ gulp.task('sass:prod', function() {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
-    .pipe(gulp.dest(paths.dist));
+    .pipe(gulp.dest(paths.cssdist));
 });
 gulp.task('js:dev', function () {
     return gulp.src(paths.script)
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(size({showFiles: true}))
-        .pipe(concat('build.js'))
+
         .pipe(sourcemaps.write())
         .pipe(size({showFiles: true}))
         .pipe(gulp.dest(paths.jsdir));
 });
 gulp.task('js:prod', function () {
     return gulp.src(paths.script)
-        .pipe(concat('build.js'))
+        .pipe(rigger())
         .pipe(min())
-        .pipe(gulp.dest(paths.dist));
+        .pipe(gulp.dest(paths.jsdist));
 });
 gulp.task('watch', function () {
     browser.init({
