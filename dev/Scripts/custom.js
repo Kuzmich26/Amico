@@ -1,9 +1,10 @@
 
-/* For Angular*/
-//= partials/App.js
-
 /*!
- *                                                              Customization scripts for main technologies
+ *                                                              jQuery Plugins
  */
+
+/*FitText.js 1.2*/
+
+//= partials/App.js
 
 //= customizedPlugins.js

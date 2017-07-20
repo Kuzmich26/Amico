@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="JS/core.js"></script>
-  <script src="css/custom.js"></script>
+
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 
@@ -94,62 +94,8 @@
     <!-- /.container-fluid -->
   </nav>
 <div ng-view=""></div>
-
-<script type="text/javascript">$(".fittext").fitText(1, {
-  minFontSize: '9px',
-  maxFontSize: '25px'
-});</script>
-<script type="text/javascript">$(".fittext").fitText(1, {
-  minFontSize: '9px',
-  maxFontSize: '25px'
-});</script>
-<script type="text/javascript">
-  var myApp = angular.module('AmicoMultipage', ['ngRoute']);
-
-
-  myApp.config(function($routeProvider) {
-    $routeProvider
-
-      .when('/home', {
-      templateUrl: '../home.html',
-      controller: 'HomeCtrl'
-    })
-
-
-    .when('/about', {
-      templateUrl: 'about.html',
-      controller: 'AboutCtrl'
-    })
-
-
-    .when('/services', {
-      templateUrl: 'services.html',
-      controller: 'servicesCtrl'
-    })
-
-    .when('/media', {
-      templateUrl: 'media.html',
-      controller: 'mediaCtrl'
-    })
-    .when('/news', {
-      templateUrl: 'news.html',
-      controller: 'newsCtrl'
-    })
-
-
-    .when('/contact', {
-      templateUrl: 'contact.html',
-      controller: 'ContactCtrl'
-    })
-
-    .otherwise({
-        templateUrl: 'home.html',
-        controller: 'HomeCtrl'
-      });
-  });
-
-</script>
-</>
+<script src="JS/custom.js"></script>
 </body>
 
+</script>
 </html>

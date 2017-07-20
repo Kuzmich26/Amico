@@ -19,9 +19,4 @@
 
 /*Bootstrap v3.3.7 (only used modules)
 //= ../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js
-/*!
- *                                                              jQuery Plugins
- */
-
-/*FitText.js 1.2*/
 //= Fittext.js

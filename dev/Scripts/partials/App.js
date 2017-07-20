@@ -5,7 +5,7 @@ myApp.config(function($routeProvider) {
   $routeProvider
 
     .when('/home', {
-    templateUrl: '../home.html',
+    templateUrl: 'home.html',
     controller: 'HomeCtrl'
   })
 
@@ -30,7 +30,7 @@ myApp.config(function($routeProvider) {
     controller: 'newsCtrl'
   })
 
-  
+
   .when('/contact', {
     templateUrl: 'contact.html',
     controller: 'ContactCtrl'

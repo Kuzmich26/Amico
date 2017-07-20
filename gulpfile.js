@@ -75,6 +75,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.script, ['js:dev']);
     gulp.watch([paths.html, paths.js]).on('change', browser.reload);
 });
+
 gulp.task('clean:prod', function() {
   del.sync(paths.dist)});
 gulp.task('html:prod', function () {

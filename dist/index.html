@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="JS/core.js"></script>
-  <script src="js/custom.js"></script>
+  <script data-require="angular.js@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+<script data-require="angular.js@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.js"></script>
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 
@@ -94,15 +95,8 @@
     <!-- /.container-fluid -->
   </nav>
 <div ng-view=""></div>
-
-<script type="text/javascript">$(".fittext").fitText(1, {
-  minFontSize: '9px',
-  maxFontSize: '25px'
-});</script>
-<script type="text/javascript">$(".fittext").fitText(1, {
-  minFontSize: '9px',
-  maxFontSize: '25px'
-});</script>
+<script src="JS/custom.js">
+</script>
 <script type="text/javascript">
   var myApp = angular.module('AmicoMultipage', ['ngRoute']);
 
@@ -111,7 +105,7 @@
     $routeProvider
 
       .when('/home', {
-      templateUrl: '../home.html',
+      templateUrl: 'home.html',
       controller: 'HomeCtrl'
     })
 
@@ -147,9 +141,7 @@
         controller: 'HomeCtrl'
       });
   });
-
 </script>
-</>
 </body>
 
 </html>
